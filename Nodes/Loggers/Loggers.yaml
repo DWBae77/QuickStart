@@ -1,5 +1,5 @@
 Name: Loggers
-Type: FolderType
+Type: LoggersCategoryFolder
 Children:
 - Name: AlarmsEventLogger1
   Id: g=781c8672ee549cb2e1cd5cae87d0ca14
@@ -136,7 +136,16 @@ Children:
     - Name: LocalTime
       Type: BaseDataVariableType
       DataType: TimeZoneDataType
-      Value: {"TypeId":{"Id":8912},"Body":{"offset":0,"daylightSavingInOffset":false}}
+      Value: 
+       {
+        "TypeId": {
+         "Id": 8912
+        },
+        "Body": {
+         "offset": 0,
+         "daylightSavingInOffset": false
+        }
+       }
   - Name: EventFieldsToLog
     Type: BaseObjectType
     Children:

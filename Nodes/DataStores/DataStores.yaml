@@ -1,5 +1,5 @@
 Name: DataStores
-Type: FolderType
+Type: DataStoresCategoryFolder
 Children:
 - Name: AlarmDB
   Id: g=542e850acb2f55acdb1d439d01582254

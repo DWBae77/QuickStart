@@ -1,6 +1,6 @@
 Name: Security
 Id: g=91ab0a8e902532653253799d5fa574c2
-Type: FolderType
+Type: SecurityCategoryFolder
 Children:
 - File: Users/Users.yaml
 - File: Groups/Groups.yaml

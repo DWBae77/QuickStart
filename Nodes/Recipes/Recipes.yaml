@@ -1,5 +1,5 @@
 Name: Recipes
-Type: FolderType
+Type: RecipesCategoryFolder
 Children:
 - Name: RecipeSchema1
   Id: g=61de579082200d6879a46f2d296cb246

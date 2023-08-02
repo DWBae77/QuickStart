@@ -1,10 +1,6 @@
 Name: QuickStart
 Type: ProjectFolder
 Children:
-- Name: BranchingEnabled
-  Type: BaseDataVariableType
-  DataType: Boolean
-  Value: false
 - Name: PasswordPolicy
   Type: PasswordPolicy
   Children:
@@ -24,18 +20,6 @@ Children:
     Type: PropertyType
     DataType: Byte
     Value: 8
-- Name: Locales
-  Type: BaseDataVariableType
-  DataType: String
-  ValueRank: OneDimension
-  ArrayDimensions: [0]
-  Value: ["en-US"]
-- Name: LocaleFallbackList
-  Type: BaseDataVariableType
-  DataType: String
-  ValueRank: OneDimension
-  ArrayDimensions: [0]
-  Value: ["en-US"]
 - File: UI/UI.yaml
 - File: Model/Model.yaml
 - File: Converters/Converters.yaml
@@ -50,15 +34,6 @@ Children:
 - File: Security/Security.yaml
 - File: Translations/Translations.yaml
 - File: Retentivity/Retentivity.yaml
-- Name: DefaultUserFolder
-  Type: NodePointer
-  DataType: NodeId
-  Value: {"IdType":2,"Id":"737089e631374bfead680f53b6296b16","Namespace":7}
-  Children:
-  - Name: Kind
-    Type: PropertyType
-    DataType: NodeId
-    Value: {"Id":61}
 - Name: RecipeSchema1
   Type: Alias
   DataType: NodeId
@@ -68,3 +43,41 @@ Children:
     Type: PropertyType
     DataType: NodeId
     Value: {"IdType":2,"Id":"c8e0d75005205993b9980e3a0036913c","Namespace":7}
+- Name: Authentication
+  Type: PropertyGroup
+  Children:
+  - Name: DefaultUserFolder
+    Type: NodePointer
+    DataType: NodeId
+    ReferenceType: HasProperty
+    Value: {"IdType":2,"Id":"737089e631374bfead680f53b6296b16","Namespace":7}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":61}
+- Name: AlarmConfiguration
+  Type: PropertyGroup
+  Children:
+  - Name: BranchingEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ReferenceType: HasProperty
+    Value: false
+- Name: Localization
+  Type: PropertyGroup
+  Children:
+  - Name: Locales
+    Type: BaseDataVariableType
+    DataType: String
+    ReferenceType: HasProperty
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]
+  - Name: LocaleFallbackList
+    Type: BaseDataVariableType
+    DataType: String
+    ReferenceType: HasProperty
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]

@@ -1,5 +1,5 @@
 Name: UI
-Type: FolderType
+Type: UICategoryFolder
 Children:
 - Name: DefaultStyleSheet
   Id: g=c2361191353eb23d57a0530581ef2923
@@ -17,6 +17,11 @@ Children:
     Type: GaugeStyle
   - Name: NavigationPanelStyle
     Type: NavigationPanelStyle
+    Children:
+    - Name: IconUsesTextColor
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: ChartStyle
     Type: ChartStyle
   - Name: DataListStyle
@@ -224,4 +229,14 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 55.0
+    - Name: CurrentTabIndex
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0
+    - Class: Reference
+      Target: ns=3;i=1181
+      Direction: Forward
+    - Class: Reference
+      Target: ns=3;i=1183
+      Direction: Forward
 - File: Pages/Pages.yaml
